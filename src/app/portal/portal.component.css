@@ -1,0 +1,524 @@
+@font-face {
+    font-family: Quicksand;
+    /* src: url("assets/fonts/Quicksand-VariableFont_wght.ttf"); */
+}
+
+@font-face {
+    font-family: Museo sans;
+    /* src: url("assets/fonts/MuseoSans_500.otf"); */
+}
+
+body {
+    background: rgb(227, 224, 224) !important;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+nav {
+    background: #1F2834
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+
+}
+
+.user {
+    color: #fff;
+    border: 1px solid #3FD28B;
+    border-radius: 54px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    margin-right: 10px;
+    background-color: #3C4E62;
+    padding-top: 2px;
+}
+
+.background {
+    background: #EEEEEE;
+    height: 100vh;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    opacity: 1;
+    /* margin-top: 20px; */
+
+}
+
+
+.card1 {
+    padding: 13px;
+    background: white;
+    padding: 0px 20px 0px 0px;
+    width: 1024px;
+    box-shadow: 0px 4px 6px #0000003D;
+    margin-top: 50px;
+
+}
+
+
+
+@media (max-width:820px) {
+    .card1 {
+        width: 700px;
+    }
+}
+
+@media(max-width:667px) {
+    .card1 {
+        width: 330px;
+        margin-top: 300px;
+
+    }
+}
+
+.expireBox {
+    /* background: gold; */
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.expire {
+
+    width: fit-content;
+    color: red;
+    background-color: #FFE4E6;
+    margin-top: -10px;
+    padding: 6px;
+
+
+}
+
+.jobRole {
+    padding: 13px;
+    background: white;
+    margin-left: 20px;
+    padding-left: 0px;
+
+}
+
+.jobRole a {
+    color: #1F7A54;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dateTime {
+    background: white(199, 23, 23);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    padding-bottom: 12px;
+
+}
+
+
+.date {
+    color: #5d5e5f;
+    padding: 1px;
+    font-size: 14px;
+}
+
+.dateLocation {
+    display: flex;
+    gap: 40px;
+    border-bottom: 2px solid rgb(215, 212, 212);
+    padding-bottom: 12px;
+
+}
+
+.dateLocation a {
+    text-decoration: none;
+    color: black;
+}
+
+.location {
+    display: flex;
+}
+
+.cardBottom {
+    padding: 13px;
+    background: white;
+    padding-left: 0px;
+    padding-top: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.jobRoles {
+    color: #5d5e5f;
+    padding: 1px;
+    font-size: 14px;
+
+}
+
+.Instructional {
+    display: flex;
+    gap: 20px;
+}
+
+.yellowCard {
+    /* background: gray; */
+    padding-top: 10px;
+}
+
+.internsTag {
+    background: #EEDD6B;
+    border-radius: 50px;
+    text-align: center;
+    width: 33%;
+
+}
+
+i {
+    padding: 4px;
+}
+
+.viewButton {
+    /* background: gray; */
+    height: 30px;
+    width: 105%;
+    display: flex;
+    justify-content: center;
+}
+
+.viewButton button {
+    cursor: pointer;
+}
+
+button {
+    background-color: #3FD28B;
+    border: none;
+    box-shadow: 0px 3px 5px #0000003D;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+
+.allCards {
+    /* background: rgb(245, 244, 243); */
+}
+
+.card2 {
+    padding: 13px;
+    background: white;
+    padding: 0px 20px 0px 0px;
+    width: 1024px;
+    box-shadow: 0px 4px 6px #0000003D;
+}
+
+@media (max-width:820px) {
+    .card2 {
+        width: 700px;
+    }
+
+}
+
+@media(max-width:667px) {
+    .card2 {
+        width: 330px;
+    }
+
+    .Instructional {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.card3 {
+    padding: 13px;
+    background: white;
+    padding: 0px 20px 0px 0px;
+    width: 1024px;
+    box-shadow: 0px 4px 6px #0000003D;
+    margin-bottom: 50px;
+}
+
+@media (max-width:820px) {
+    .card3 {
+        width: 700px;
+    }
+}
+
+@media(max-width:667px) {
+    .card3 {
+        width: 330px;
+    }
+}
+
+
+/* ================================HALL TICKET CSS================================ */
+.hallTicket {
+    background-color: #EEEEEE;
+    padding: 30px;
+    /* margin-top: 100px; */
+}
+
+@media(max-width:667px) {
+    .hallTicket {
+        padding: 15px
+    }
+}
+
+.hallticketCard {
+    background-color: gray;
+    margin-top: -50px;
+
+}
+
+.circleBorder {
+    background: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circle {
+    background: #18BE2E;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 1000px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circle i {
+    color: white;
+    /* background: red; */
+    font-size: 54px;
+}
+
+.box {
+    background: #FFFFFF;
+    padding: 15px;
+    padding-top: 60px;
+    box-shadow: 0px 4px 6px #0000003D;
+
+
+    /* width: fit-content; */
+}
+
+.box1 {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(214, 211, 211);
+    font-size: 20px;
+    text-align: center;
+    color: #222222;
+}
+
+.box2,
+.box3,
+.box4 {
+    border-bottom: 2px solid rgb(214, 211, 211);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grayText {
+    color: #666666;
+    padding-bottom: 10px;
+    font-size: 14px;
+
+
+}
+
+.viewButton2 {
+    height: 80px;
+    width: 105%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* =========================================================================== */
+
+.application {
+    background-color: #DBEFFF;
+    padding: 10px;
+    width: 102%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.application-text {
+    margin-left: 13px;
+}
+
+.WalkinCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    opacity: 1;
+}
+
+.WalkinCards1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    opacity: 1;
+}
+
+
+.WalkinCard1 {
+    margin-top: 30px;
+    padding: 13px;
+    background: white;
+    padding: 0px 20px 0px 0px;
+    width: 1024px;
+    box-shadow: 0px 4px 6px #0000003D;
+
+}
+
+.WalkinCard2 {
+    margin-top: 30px;
+    background: white;
+    padding: 0px 20px 0px 0px;
+    width: 1024px;
+    box-shadow: 0px 4px 6px #0000003D;
+    padding: 20px
+}
+
+.WalkinCard2 p {
+    margin-top: 10px;
+}
+
+.jobRole_applybtn {
+    padding: 13px;
+
+}
+
+.apllyContent {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.apllyContent a {
+
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.Instructional_2 {
+    display: flex;
+    gap: 20px;
+    color: #1F7A54;
+}
+
+.Instructional_2 i {
+    color: black;
+}
+
+.roles {
+    margin-top: 20px;
+    /* background: white; */
+    padding: 0px 20px 0px 0px;
+    width: 1024px;
+    box-shadow: 0px 0px 6px #0000003D;
+    padding: 20px;
+}
+
+.role {
+    padding: 0px 20px 0px 0px;
+    width: 1024px;
+    /* box-shadow: 0px 0px 6px #0000003D; */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.role-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    opacity: 1;
+}
+
+.firs {
+    width: 102%;
+}
+
+.description li {
+    list-style-type: none;
+}
+
+.description p {
+    margin-top: 10px;
+}
+
+.end {
+    margin-bottom: 40px;
+}
+
+/* =========================================================================== */
+
+.active {
+    background-color: #18BE2E;
+}
+
+
+
+/* accordion */
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    /* width: 100%; */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }

@@ -1,0 +1,187 @@
+<body>
+    <nav>
+        <div class="content">
+            <div class="logo"><a href="#">
+                    <img src="assets/icons/logo used in header.svg" alt="">
+                </a></div>
+            <div class="user"><img src="assets/icons/" alt="">U</div>
+        </div>
+    </nav>
+
+    <!-- ------------------------------ -->
+
+    <div class="WalkinCards">
+        <div class="WalkinCard1">
+
+            <div class="jobRole_applybtn">
+                <div class="apllyContent">
+                    <a href="#" id="title"> {{job['title']}}</a>
+                    <button>APPLY</button>
+                </div>
+            </div>
+            <div class="dateTime">
+                <div class="date">Date & Time : </div>
+                <div class="dateLocation" id="">
+                    <a href="#" id="date"> {{
+                        joinDate(job['date_from'], '-') + ' to ' + joinDate(job['date_to'], '-') }} </a> | <div
+                        class="location"><i class="fa-solid fa-location-dot"></i>
+                        <div id="location"> {{job['location']}}</div>
+                    </div>
+                </div>
+
+                <div class="cardBottom">
+                    <div class="jobRoles">
+                        Job Roles :
+                    </div>
+                    <div class="Instructional_2" id="job_roles">
+                        <div class="one_2" *ngFor="let role of job['role_names'].split(',')"> <i
+                                class="fa-solid fa-computer"></i>{{role}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application  ">
+                <div class="application-text">
+                    Pre-requiesite and Application Process
+                </div>
+                <div class="vr">
+                </div>
+                <div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="role-content firs ">
+                <div class=" role">
+                    <div class="application-text description" id="general_instruction">
+                        General Instructions :
+                        <li *ngFor="let gen of generalInstructions[0].instructions.split('\\n')">
+                            - {{gen}}
+                        </li>
+                    </div>
+                    <hr />
+                    <div class="application-text description" id="exam_instruction">
+                        Instructions for the Exam :
+                        <li *ngFor="let exm of examInstructions[0].instructions.split('\\n')">
+                            - {{exm}}
+                        </li>
+                    </div>
+                    <hr />
+                    <div class="application-text description">
+                        Minimum System Requirements :
+                        <li>
+                            - Personal Laptop or Desktop computer in working condition with good quality camera (you can
+                            use Windows 7 and above).
+                        </li>
+                        <li>
+                            - The latest version of Google Chrome Browser only. - Please note that Internet speed should
+                            be minimum 1 Mbps.
+                        </li>
+                        <li>
+                            - Do not use a MacBook or iPad for the proctored exam.
+                        </li>
+                    </div>
+                    <hr />
+                    <div class=" application-text description">
+                        Process :
+                        <li>
+                            - Every round is an elimination round. Candidates need to clear all rounds to get selected.
+                        </li>
+                        <p>Round I : 4th August, 2018 <br />
+                            Aptitude Test : 25 Questions</p>
+                        <p>Round II (Interview) : 4th August, 2018.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="WalkinCards">
+        <div class="WalkinCard2">
+            Time Slots and Preferences
+
+            <p>
+                Select a time slot :
+            </p>
+            <div id="time_slot">
+                <div *ngFor="let timeSlot of job.time_slots.split(',')">
+                    <input type="radio" name="time_slot" id="time_slot" value="{{timeSlot}}">
+                    <label>{{timeSlot}} </label>
+                </div>
+                <!-- <div>
+                    <input type="radio" name="time_slot" id="time_slot" value="9-11">
+                    <label>1:00 AM to 3:00 AM</label>
+                </div> -->
+            </div>
+            <hr />
+            <p>Select your Preference</p>
+            <div id="preference">
+                <div *ngFor="let role of job.role_names.split(',')">
+                    <input type="checkbox" value="{{role}}">
+                    <label>{{role}}</label>
+                </div>
+                <!-- <div>
+                    <input type="checkbox" value="9-11">
+                    <label>Instructional Designer</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="9-11">
+                    <label>Software Engineer</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="9-11">
+                    <label>Software Quality Engineer</label>
+                </div> -->
+            </div>
+            <hr />
+
+            <div>
+                <i class="fa fa-upload" aria-hidden="true"></i>
+                UPLOAD UPDATED RESUME
+            </div>
+        </div>
+    </div>
+
+    <div id="roles_details">
+        <div class="WalkinCards accordion" *ngFor="let role of roles">
+            <div class="application roles">
+                <div class="application-text">
+                    {{role.rolename}}
+                </div>
+                <div class="vr">
+                </div>
+                <div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <div class="role-content panel" style="display: flex;width:1024px;margin-left: 12px;">
+                <div class="role">
+                    <div class="application-text">
+                        Gross Compensation Package :
+                        <p>
+                            Rs {{role.package}} lpa
+                        </p>
+                    </div>
+                    <hr />
+                    <div class="description">
+                        Role Description : {{role.description.split('\\n').length}}
+                        <li *ngFor="let role of role?.description?.split('\\n')">
+                            <!-- <input type="checkbox" value="{{role}}"> -->
+                            {{role}}
+                        </li>
+                    </div>
+                    <hr />
+                    <div class="description">
+                        Requirements :
+                        <li *ngFor="let requirement of role.requirements.split('\\n')">
+                            - {{requirement}}
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
